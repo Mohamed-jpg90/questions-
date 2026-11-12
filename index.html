@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مساحة التركيز</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="focus-card" aria-labelledby="page-title">
+        <header class="card-header">
+          <div>
+            <p class="eyebrow">تمرين ذهني قصير</p>
+            <h1 id="page-title">التركيز</h1>
+            <p class="intro">خذ لحظة للتأمل، ثم أجب بهدوء عن الأسئلة التالية.</p>
+          </div>
+          <div class="timer" aria-live="polite" aria-label="الوقت المتبقي">
+            <span class="timer-label">الوقت المتبقي</span>
+            <strong id="countdown">06:00</strong>
+          </div>
+        </header>
+
+        <form id="focus-form">
+          <ol class="questions">
+            <li>
+              <label for="answer-1">ما لون آخر بنطال اشتريته؟</label>
+              <input id="answer-1" name="answer-1" type="text" placeholder="اكتب إجابتك هنا" required />
+            </li>
+            <li>
+              <label for="answer-2">متى كان آخر حفل زفاف حضرته؟</label>
+              <input id="answer-2" name="answer-2" type="text" placeholder="اكتب إجابتك هنا" required />
+            </li>
+            <li>
+              <label for="answer-3">ما هي آخر هدية حضرتها لوالدتك؟</label>
+              <input id="answer-3" name="answer-3" type="text" placeholder="اكتب إجابتك هنا" required />
+            </li>
+            <li>
+              <label for="answer-4">من هو أول صديق لك في مدرستك الابتدائية؟</label>
+              <input id="answer-4" name="answer-4" type="text" placeholder="اكتب إجابتك هنا" required />
+            </li>
+            <li>
+              <label for="answer-5">ماذا كان لون زيّك في المدرسة الثانوية؟</label>
+              <input id="answer-5" name="answer-5" type="text" placeholder="اكتب إجابتك هنا" required />
+            </li>
+          </ol>
+          <button type="submit">إنهاء</button>
+        </form>
+
+        <section id="result" class="result" aria-live="assertive" hidden>
+          <span class="result-icon">!</span>
+          <h2>انت اتهكرت يا بيه</h2>
+          <p>انتهى التمرين.</p>
+          <button id="restart" type="button" class="secondary-button">إعادة المحاولة</button>
+        </section>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
